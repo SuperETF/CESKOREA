@@ -1,0 +1,9 @@
+export { default as ProfileImageUploader } from "./ProfileImageUploader";
+export { default as BasicInfoSection }     from "./BasicInfoSection";
+export { default as SpecialtySelector }     from "./SpecialtySelector";
+export { default as ExperienceSection }     from "./ExperienceSection";
+export { default as CertificatesSection }   from "./CertificatesSection";
+export { default as RegionSelector }        from "./RegionSelector";
+export { default as IntroductionSection }   from "./IntroductionSection";
+export { default as ConsentSection }        from "./ConsentSection";
+export { default as SubmitSection }         from "./SubmitSection";
