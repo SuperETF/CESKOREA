@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+// src/App.tsx
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,7 +18,7 @@ import { EducationPage } from "./features/education";
 import RegistrationPage from "./features/registration/RegistrationPage";
 import CertifiedListPage from "./features/certified/pages/CertifiedListPage";
 import TrainerProfilePage from "./features/certified/pages/TrainerProfilePage";
-import FreeBoardPage from "./features/board/pages/FreeBoardPage"; // ✅ 추가
+import FreeBoardPage from "./features/board/pages/FreeBoardPage";
 import { FooterNav } from "./common/components";
 
 function MainPage() {
@@ -33,7 +34,7 @@ function MainPage() {
         <MapSection
           hoveredRegion={hoveredRegion}
           onRegionHover={setHoveredRegion}
-          onRegionClick={(r) => navigate("/experts")}
+          onRegionClick={() => navigate("/experts")}
         />
         <CertifiedExperts onSeeAll={() => navigate("/experts")} />
         <StatsSection />
@@ -49,7 +50,7 @@ export default function App() {
       <div className="flex flex-col min-h-screen bg-white text-gray-800">
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/board" element={<FreeBoardPage />} /> {/* ✅ 자유게시판 */}
+          <Route path="/board" element={<FreeBoardPage />} />
           <Route path="/experts" element={<CertifiedListPage />} />
           <Route path="/experts/:id" element={<TrainerProfilePage />} />
           <Route path="/education" element={<EducationPage />} />
